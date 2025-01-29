@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+gg<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoWebsite</title>
+    <link rel="stylesheet" href="website.css">
+    <script src="./jquery.js"></script>
+</head>
+b<body>
+    <header>
+        <img src="images.jpg" alt="">
+        <nav>
+            <div class="logo">photo<span>pi</span>X</div>
+            <div class="menu">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="icon">
+                <button>Login</button>
+            </div>
+        </nav>
+        <section class="h-text">
+            <h1><pre>Capturing the moment that <br> captivate your heart </pre></h1>
+            <input type="text" placeholder="Search here.......">
+            <button>Search</button>
+        </section>
+    </header>
+    <section class="gallery">
+        <div class="portfolio">
+            <ul>
+                <li class="active" data-filter="">ALL</li>
+                <li data-filter="">Nature</li>
+                <li data-filter="">Fashion</li>
+                <li data-filter="">Wedding</li>
+            </ul>
+        </div>
+      <div class="item-menu">
+        <div class="item nature">
+            <img src="images (1).jpg" alt="" width="100px" height="100px">
+        </div>
+        <div class="item fashion">
+            <img src="images (2).jpg" alt="" width="100px" height="100px">
+        </div>
+        <div class="item wedding">
+            <img src="download (3).jpg" alt="" width="100px" height="100px">
+        </div>
+        <div class="item nature">
+            <img src="download.jpg" alt="" width="100px" height="100px">
+        </div>
+    <div class="item fashion">
+        <img src="boysfashiondress_191de82a_1594344701411_cmprsd_40.jpg" alt="" width="100px" height="100px">
+    </div>
+    <div class="item wedding">
+        <img src="autumn-nature-landscape-colorful-forest-autumn-nature-landscape-colorful-forest-morning-sunlight-131400332.webp" alt="" width="100px" height="100px">
+    </div>
+</div>
+</section>
+  <section class="information">
+      <div class="info">
+       <h1>Our <span>information</span></h1>
+       <pre>What are member says</pre> 
+      </div>
+      <div class="card">
+        <img src="images (1).jpg" alt="" id="img1">
+        <p><b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa explicabo repellat non consectetur tempora quidem dolorem! Animi eum ut qui in corporis id harum rem ex. Natus assumenda distinctio sint.</b></p>
+         <h2>* Memon</h2>
+         <img src="images (1).jpg" alt="">
+         <img src="autumn-nature-landscape-colorful-forest-autumn-nature-landscape-colorful-forest-morning-sunlight-131400332.webp" alt="">
+         <img src="images (1).jpg" alt="">
+         <img src="autumn-nature-landscape-colorful-forest-autumn-nature-landscape-colorful-forest-morning-sunlight-131400332.webp" alt="">
+    </div>
+  </section>
+  <div class="profile">
+    <img src="download (1).jpg" alt="">
+    <img src="download (2).jpg" alt="">
+    <img src="download.jpg" alt="">
+    <img src="images (2).jpg" alt="">
+  </div>
+    <script>
+        $(document).ready(function(){
+            $('.portfolio ul li').click(function(){
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active')
+            });
+            $('portfolio ul li').click(function(){
+               var filter = $(this).data('filter');
+               if(filter == '*'){
+                $('.item-menu .item').show();
+               }else{
+                $('.item-menu .item').hide();
+                $('.item-menu .item' + filter).show();
+               }
+            });
+        });
+    </script>
+</body>
+</html>
